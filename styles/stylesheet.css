@@ -1,32 +1,27 @@
-body {
-  /* change bg */
-  background-color: white;
+/* override the normal box model sizing rules */
+* {box-sizing: border-box;}
 
-  /* set global font-family */
+html, body {
+  background-color: white;
   font-family: sans-serif;
+  height: 100%;
 }
 
 
 /* OUTER ARTICLE (class="contentwrapper") */
 .contentwrapper {
   width: 100%;
+  height: 100%;
   align-content: center;
 }
 
 
 /* HEADER (headline and main nav) */
 header h1 {
-  /* make bigger */
   font-size: 2.6rem;
-
-  /* change color */
   color: #8668b0;
-  
-  /* center */
   text-align: center;
-  
   background-color: white;
-  
   padding: 2rem 0 1rem 0;
 }
 
@@ -36,16 +31,9 @@ header h1 {
   width: 100%;
   background-color: #8468B3;
   height: 2.2rem;
- 
-  /* set the border */
   border: none;
-
   /* center content within links */
   align-content: center;
-
-  /* width on links */
-  /* width: auto; */
-
   /* font color */
   color: white;
 }
@@ -54,7 +42,6 @@ header h1 {
   /* remove bullets */
   list-style: none;
 }
-
 
 .main-nav ul li {
   float: left;
@@ -78,34 +65,21 @@ header h1 {
 
 /* ASIDE (left bar with list of photos) */
 aside {
-  
-  width: 20%;
+  width: 20%; 
   height: 70%;
-  
-  /* clear float */
   clear: both;
-
-  /* set bgcolor */
+  float: left;
   background-color: #C0B2D5;
-  
-  /* float left */
-  float: left;  
-  
-/*  padding: 5rem, 0, 6rem, 0;*/
-/*  padding: 5rem;*/
+  padding: 3rem 0 6rem 0;
 }
 
 aside ul {
-  
+  margin: 0px auto; /* why needed? */
   width: 6em;
-  
-  /* clear floats */
-  clear: left;  
 }
 
 aside ul li {
-  float: left;
-  padding: 0.5rem;
+  padding: 0.5em;
 }
 
 aside ul li a {
@@ -116,35 +90,32 @@ aside ul li a {
 
 /* ARTICLE (main area with photo and text) */
 .contentwrapper article {
-  
+/*  height: 70%*/ /* tbd: can't uncomment this to set height - pushes article to below the aside */
   width: 80%;
-
-  /* float right */
   float: right;
-
-  /* chg bgcolor */
   background-color: #e1e4e9;
-  
-/*  padding: 3em;*/
+  /*  padding: 3em;*/
+  text-align: center;
 }
 
 .contentwrapper article p {
   width: 70%;
-  text-align: center;
   font-size: 0.8rem;
+  text-align: center;
+/*  margin: 0px auto;*/
+  margin: 4rem 2rem 4rem 2rem;
 }
 
-
-figure {
-  /* center figure using margin:auto */
-  margin: auto;
-  
+.contentwrapper article img {
+  /* center figure */
+  display: block; /* centers horizontally, why? */
+  margin: 4rem auto 2rem auto;
+  width: 40%;
 }
 
 
 /* FOOTER (social media icon-links) */
-
-.contentwrapper footer {
+footer {
   clear: both;  
   height: 15%;
 
@@ -153,47 +124,36 @@ figure {
   align-content: center;
 }
 
-.contentwrapper footer ul {
-  width: 60%;
+footer ul {
+  width: 40%;
   margin: 0px auto;
   background-color: white;
 }
 
-.contentwrapper footer ul li {
-  width: 25%;
-  height: 5%;
+footer ul li {
+  width: 7%;
   padding: .75em;
   float: left;
   align-content: center;
+/*  display:block;*/
 }
 
-.contentwrapper footer ul li a {
+footer ul li a {
 /*  color:#FFF;*/
 /*  text-decoration:none;*/
 
-/*  height: 15%;*/
+  height: 15%;
 /*  background-color: white;*/
 /*  text-decoration: none;*/
 }
 
-.contentwrapper footer ul li a img {
+footer ul li a img {
   width: 2rem;
 /*  height: 5%;*/
   display: block;
   margin: auto;
 
-  background-color: white;
+/*  background-color: white;*/
 }
 
-
-
-
-
-
-
 /* use dev tools to center all sections */
-
-/* override the normal box model sizing rules */
-/*
-* {box-sizing: border-box;}
-*/
