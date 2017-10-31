@@ -1,0 +1,199 @@
+body {
+  /* change bg */
+  background-color: white;
+
+  /* set global font-family */
+  font-family: sans-serif;
+}
+
+
+/* OUTER ARTICLE (class="contentwrapper") */
+.contentwrapper {
+  width: 100%;
+  align-content: center;
+}
+
+
+/* HEADER (headline and main nav) */
+header h1 {
+  /* make bigger */
+  font-size: 2.6rem;
+
+  /* change color */
+  color: #8668b0;
+  
+  /* center */
+  text-align: center;
+  
+  background-color: white;
+  
+  padding: 2rem 0 1rem 0;
+}
+
+
+/* NAVIGATION BAR */
+.main-nav {
+  width: 100%;
+  background-color: #8468B3;
+  height: 2.2rem;
+ 
+  /* set the border */
+  border: none;
+
+  /* center content within links */
+  align-content: center;
+
+  /* width on links */
+  /* width: auto; */
+
+  /* font color */
+  color: white;
+}
+
+.main-nav ul {
+  /* remove bullets */
+  list-style: none;
+}
+
+
+.main-nav ul li {
+  float: left;
+  width: 13.8%;
+  border-right: 4px solid #6B4F9C;
+  text-align: center;
+}
+
+/* no bar to the right of rightmost button */
+.main-nav ul li:last-child {
+  border-right: none;
+}
+
+.main-nav ul li a {
+  line-height: 2.2rem;
+  color: white;  
+  text-decoration: none;
+  align-content: center;
+}
+
+
+/* ASIDE (left bar with list of photos) */
+aside {
+  
+  width: 20%;
+  height: 70%;
+  
+  /* clear float */
+  clear: both;
+
+  /* set bgcolor */
+  background-color: #C0B2D5;
+  
+  /* float left */
+  float: left;  
+  
+/*  padding: 5rem, 0, 6rem, 0;*/
+/*  padding: 5rem;*/
+}
+
+aside ul {
+  
+  width: 6em;
+  
+  /* clear floats */
+  clear: left;  
+}
+
+aside ul li {
+  float: left;
+  padding: 0.5rem;
+}
+
+aside ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* ARTICLE (main area with photo and text) */
+.contentwrapper article {
+  
+  width: 80%;
+
+  /* float right */
+  float: right;
+
+  /* chg bgcolor */
+  background-color: #e1e4e9;
+  
+/*  padding: 3em;*/
+}
+
+.contentwrapper article p {
+  width: 70%;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+
+figure {
+  /* center figure using margin:auto */
+  margin: auto;
+  
+}
+
+
+/* FOOTER (social media icon-links) */
+
+.contentwrapper footer {
+  clear: both;  
+  height: 15%;
+
+  width: 100%;
+  background-color: white;
+  align-content: center;
+}
+
+.contentwrapper footer ul {
+  width: 60%;
+  margin: 0px auto;
+  background-color: white;
+}
+
+.contentwrapper footer ul li {
+  width: 25%;
+  height: 5%;
+  padding: .75em;
+  float: left;
+  align-content: center;
+}
+
+.contentwrapper footer ul li a {
+/*  color:#FFF;*/
+/*  text-decoration:none;*/
+
+/*  height: 15%;*/
+/*  background-color: white;*/
+/*  text-decoration: none;*/
+}
+
+.contentwrapper footer ul li a img {
+  width: 2rem;
+/*  height: 5%;*/
+  display: block;
+  margin: auto;
+
+  background-color: white;
+}
+
+
+
+
+
+
+
+/* use dev tools to center all sections */
+
+/* override the normal box model sizing rules */
+/*
+* {box-sizing: border-box;}
+*/
