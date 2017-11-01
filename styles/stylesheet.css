@@ -12,7 +12,6 @@ html, body {
 .contentwrapper {
   width: 100%;
   height: 100%;
-  align-content: center;
 }
 
 
@@ -44,6 +43,8 @@ header h1 {
 }
 
 .main-nav ul li {
+/*  display: inline;   wouldn't this be better than relying on matching the
+                   height in .main-nav (above) and line-height in a (below)? */
   float: left;
   width: 13.8%;
   border-right: 4px solid #6B4F9C;
@@ -66,7 +67,7 @@ header h1 {
 /* ASIDE (left bar with list of photos) */
 aside {
   width: 20%; 
-  height: 70%;
+  height: 60%;
   clear: both;
   float: left;
   background-color: #C0B2D5;
@@ -74,7 +75,7 @@ aside {
 }
 
 aside ul {
-  margin: 0px auto; /* why needed? */
+  margin: 0px auto;
   width: 6em;
 }
 
@@ -90,25 +91,24 @@ aside ul li a {
 
 /* ARTICLE (main area with photo and text) */
 .contentwrapper article {
-/*  height: 70%*/ /* tbd: can't uncomment this to set height - pushes article to below the aside */
+  height: 60%;
   width: 80%;
   float: right;
   background-color: #e1e4e9;
-  /*  padding: 3em;*/
-  text-align: center;
 }
 
 .contentwrapper article p {
-  width: 70%;
+  max-width: 70%;
+  display: block;
   font-size: 0.8rem;
-  text-align: center;
-/*  margin: 0px auto;*/
-  margin: 4rem 2rem 4rem 2rem;
+/* why centers in entire .contentwrapper instead of relative to the containing <article>?: */
+  text-align: center; 
+  margin: 0 auto;
 }
 
 .contentwrapper article img {
-  /* center figure */
-  display: block; /* centers horizontally, why? */
+  /* center horizontally */
+  display: block; 
   margin: 4rem auto 2rem auto;
   width: 40%;
 }
@@ -117,43 +117,24 @@ aside ul li a {
 /* FOOTER (social media icon-links) */
 footer {
   clear: both;  
-  height: 15%;
-
-  width: 100%;
   background-color: white;
-  align-content: center;
 }
 
 footer ul {
-  width: 40%;
-  margin: 0px auto;
+  width: 30%;
+  margin: 0 auto;
   background-color: white;
 }
 
 footer ul li {
-  width: 7%;
-  padding: .75em;
   float: left;
-  align-content: center;
-/*  display:block;*/
+  padding: 2em 1em 1em 1em;
 }
 
 footer ul li a {
-/*  color:#FFF;*/
-/*  text-decoration:none;*/
-
-  height: 15%;
-/*  background-color: white;*/
-/*  text-decoration: none;*/
 }
 
 footer ul li a img {
+  /* shrink icons */
   width: 2rem;
-/*  height: 5%;*/
-  display: block;
-  margin: auto;
-
-/*  background-color: white;*/
 }
-
-/* use dev tools to center all sections */
